@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: digitaltag
+  name: digitaltag
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: digitaltag
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: digitaltag
+    spec:
+      containers:
+      - image: kris2093/digitaltag:1.5.1
+        name: digitaltag
